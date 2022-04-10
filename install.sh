@@ -17,7 +17,7 @@ export HOME="$(pwd)"
 export DISPLAY=":0"
 cd $HOME 2> /dev/null
 sudo mkdir ~/.vnc 2> /dev/null
-sudo printf '#!/bin/bash\ndbus-launch &> /dev/null\nxfce4-session\nautocutsel -fork\n' > ~/.vnc/xstartup
+sudo printf '#!/bin/bash\ndbus-launch &> /dev/null\nautocutsel -fork\nxfce4-session\n' > ~/.vnc/xstartup
 wget -O startvps.sh "https://raw.githubusercontent.com/KhanhNguyen9872/Ubuntu_VPS_Google_Shell/main/startvps.sh" 2> /dev/null
 wget -O setupPS.sh "https://raw.githubusercontent.com/KhanhNguyen9872/Ubuntu_VPS_Google_Shell/main/setupPS.sh" 2> /dev/null
 wget -O vscode.deb "https://github.com/KhanhNguyen9872/Ubuntu_VPS_Google_Shell/blob/main/app/vscode_1.66.1_amd64.deb?raw=true" 2> /dev/null
