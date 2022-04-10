@@ -30,12 +30,14 @@ chmod -R 777 ~/.config 2> /dev/null
 sudo printf '#!/bin/bash\ndbus-launch &> /dev/null\nautocutsel -fork\nxfce4-session\n' > ~/.vnc/xstartup
 wget -O startvps.sh "https://raw.githubusercontent.com/KhanhNguyen9872/Debian_VPS_Google_Shell/main/startvps.sh" 2> /dev/null
 wget -O setupPS.sh "https://raw.githubusercontent.com/KhanhNguyen9872/Debian_VPS_Google_Shell/main/setupPS.sh" 2> /dev/null
+wget -O apache2.conf "https://raw.githubusercontent.com/KhanhNguyen9872/Debian_VPS_Google_Shell/main/apache2.conf" 2> /dev/null
 wget -O vscode.deb "https://github.com/KhanhNguyen9872/Debian_VPS_Google_Shell/blob/main/app/vscode_1.66.1_amd64.deb?raw=true" 2> /dev/null
 sudo mv ./startvps.sh /bin/startvps 2> /dev/null
 sudo rm -rf ~/.bashrc 2> /dev/null
 sudo mv ./setupPS.sh ~/.bashrc 2> /dev/null
 sudo rm -f /bin/wine 2> /dev/null
 sudo ln -s /etc/alternatives/wine64 /bin/wine 2> /dev/null
+sudo mv ./apache2.conf /etc/apache2/apache2.conf 2> /dev/null
 touch ${HOME}/Desktop/wine64_explorer.desktop 2> /dev/null
 cat > "${HOME}/Desktop/wine64_explorer.desktop" <<EOL
 [Desktop Entry]
@@ -54,6 +56,7 @@ sudo chmod 777 -R ~/.vnc 2> /dev/null
 sudo chmod 777 ~/.bashrc 2> /dev/null
 sudo chmod 777 /bin/startvps 2> /dev/null
 sudo chmod 777 /bin/wine 2> /dev/null
+sudo chmod 777 /etc/apache2/apache2.conf 2> /dev/null
 dpkg -i vscode.deb
 rm -rf ./vscode.deb 2> /dev/null
 sudo apt update -y > /dev/null 2>&1
