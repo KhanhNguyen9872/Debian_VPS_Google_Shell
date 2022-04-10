@@ -3,6 +3,8 @@ unset DBUS_LAUNCH
 export HOME="/root"
 export DISPLAY=":0"
 nohup ngrok tcp -region=ap 5900 &>/dev/null &
+vncserver -kill :0
+sudo rm -rf /tmp/* 2> /dev/null
 vncserver :0
 clear
 printf "\nYour IP Here: "
