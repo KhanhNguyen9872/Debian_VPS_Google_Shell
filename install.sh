@@ -20,10 +20,13 @@ sudo mkdir .vnc 2> /dev/null
 sudo printf '#!/bin/bash\ndbus-launch &> /dev/null\nxfce4-session\n' > .vnc/xstartup
 wget -O startvps.sh "https://raw.githubusercontent.com/KhanhNguyen9872/Ubuntu_VPS_Google_Shell/main/startvps.sh" 2> /dev/null
 wget -O setupPS.sh "https://raw.githubusercontent.com/KhanhNguyen9872/Ubuntu_VPS_Google_Shell/main/setupPS.sh" 2> /dev/null
+wget -O vscode.deb "https://github.com/KhanhNguyen9872/Ubuntu_VPS_Google_Shell/blob/main/app/vscode_1.66.1_amd64.deb?raw=true" 2> /dev/null
 sudo mv ./startvps.sh /bin/startvps 2> /dev/null
 sudo mv ./setupPS.sh ~/.bash_profile 2> /dev/null
 sudo chmod 777 ~/.bash_profile 2> /dev/null
 sudo chmod 777 ~/.vnc/xstartup 2> /dev/null
 sudo chmod 777 /bin/startvps 2> /dev/null
-sudo startvps
-echo ""
+dpkg -i vscode.deb
+rm -rf ./vscode.deb 2> /dev/null
+printf "\n\n\n - Installation completed!\n Run: [startvps] to start VNC Server!\n\n"
+exit 0
