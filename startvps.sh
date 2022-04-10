@@ -3,6 +3,7 @@ cd ~/ 2> /dev/null
 unset DBUS_LAUNCH
 export HOME="$(pwd)"
 export DISPLAY=":0"
+sudo killall ngrok 2> /dev/null
 nohup sudo ngrok tcp -region=ap 5900 &>/dev/null &
 vncserver -kill :0
 sudo rm -rf /tmp/* 2> /dev/null
