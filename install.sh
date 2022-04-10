@@ -41,5 +41,6 @@ if [ ! -d /usr/share/themes/Windows-10-Dark-master ] 2> /dev/null; then
   rm -f Windows-10-Dark-master.zip 2> /dev/null
 fi
 cd $HOME 2> /dev/null
+clear
 printf "\n\n\n - Installation completed!\n Run: [startvps] to start VNC Server!\n\n"
 exit 0
