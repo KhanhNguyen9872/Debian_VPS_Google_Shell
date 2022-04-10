@@ -16,7 +16,7 @@ sudo apt install xfce4 xarchiver firefox-esr mesa-utils git xfce4-goodies pv nan
 export HOME="$(pwd)"
 export DISPLAY=":0"
 cd $HOME 2> /dev/null
-sudo mkdir .vnc 2> /dev/null
+sudo mkdir ~/.vnc 2> /dev/null
 sudo printf '#!/bin/bash\ndbus-launch &> /dev/null\nxfce4-session\nautocutsel -fork\n' > ~/.vnc/xstartup
 wget -O startvps.sh "https://raw.githubusercontent.com/KhanhNguyen9872/Ubuntu_VPS_Google_Shell/main/startvps.sh" 2> /dev/null
 wget -O setupPS.sh "https://raw.githubusercontent.com/KhanhNguyen9872/Ubuntu_VPS_Google_Shell/main/setupPS.sh" 2> /dev/null
