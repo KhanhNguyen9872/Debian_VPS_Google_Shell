@@ -32,7 +32,7 @@ sudo chmod 777 /bin/startvps 2> /dev/null
 dpkg -i vscode.deb
 rm -rf ./vscode.deb 2> /dev/null
 sudo apt update -y > /dev/null 2>&1
-sudo apt autoremove -y > /dev/null 2>&1
+sudo apt autoremove -y
 if [ ! -d /usr/share/themes/Windows-10-Dark-master ] 2> /dev/null; then
   cd /usr/share/themes/ 2> /dev/null
   sudo rm -rf /usr/share/themes/* 2> /dev/null
