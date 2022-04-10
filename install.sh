@@ -11,9 +11,8 @@ read -p "INSERT authtoken ngrok: " key
 ngrok authtoken $key
 echo ""
 echo "Installing Linux (Debian amd64)...."
-sudo apt update -y
-sudo apt upgrade -y
-sudo apt install xfce4 xarchiver firefox-esr mesa-utils git xfce4-goodies pv nano apt-utils dialog terminator autocutsel dbus-x11 dbus neofetch perl p7zip unzip zip curl tar git python3 python3-pip net-tools openjdk-17-jdk libreoffice hardinfo docker-compose tigervnc-standalone-server tigervnc-xorg-extension docker -y
+sudo apt update -y > /dev/null 2>&1
+sudo apt install libc-bin base-files sysvinit-utils tzdata bazel xfce4 xarchiver firefox-esr mesa-utils git xfce4-goodies pv nano apt-utils dialog terminator autocutsel dbus-x11 dbus neofetch perl p7zip unzip zip curl tar git python3 python3-pip net-tools openjdk-17-jdk openssl libreoffice hardinfo docker-compose tigervnc-standalone-server tigervnc-xorg-extension docker -y
 export HOME="$(pwd)"
 export DISPLAY=":0"
 cd $HOME 2> /dev/null
@@ -30,8 +29,8 @@ sudo chmod 777 ~/.bashrc 2> /dev/null
 sudo chmod 777 /bin/startvps 2> /dev/null
 dpkg -i vscode.deb
 rm -rf ./vscode.deb 2> /dev/null
-sudo apt update -y
-sudo apt autoremove -y
+sudo apt update -y > /dev/null 2>&1
+sudo apt autoremove -y > /dev/null 2>&1
 if [ ! -d /usr/share/themes/Windows-10-Dark-master ] 2> /dev/null; then
   cd /usr/share/themes/ 2> /dev/null
   sudo rm -rf /usr/share/themes/* 2> /dev/null
