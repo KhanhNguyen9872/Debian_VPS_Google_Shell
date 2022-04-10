@@ -7,7 +7,7 @@ echo "Preparing...."
 wget -O ngrok-stable-linux-amd64.zip "https://github.com/KhanhNguyen9872/Ubuntu_VPS_Google_Shell/blob/main/ngrok-stable-linux-amd64.zip?raw=true" > /dev/null 2>&1
 unzip ngrok-stable-linux-amd64.zip > /dev/null 2>&1
 sudo mv ./ngrok /bin/ngrok; chmod 777 /bin/ngrok
-read -p "Nhập key ngrok: " key
+read -p "INSERT authtoken ngrok: " key
 ngrok authtoken $key
 echo ""
 echo "Installing Linux (Debian amd64)...."
