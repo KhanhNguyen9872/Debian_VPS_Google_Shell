@@ -9,6 +9,8 @@ vncserver -kill :0
 sudo rm -rf /tmp/* 2> /dev/null
 vncserver :0
 sudo /sbin/sysctl -w net.ipv4.tcp_keepalive_time=10000 net.ipv4.tcp_keepalive_intvl=5000 net.ipv4.tcp_keepalive_probes=100
+khanhall="$(service  --status-all 2> /dev/null | grep '\-' | awk '{print $4}')"
+while IFS= read -r line; do    sudo service "$line" start &> /dev/null 2> /dev/null; done < <(printf '%s\n' "$khanhall")
 clear
 printf "\nYour IP Here: "
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
