@@ -1,4 +1,5 @@
 #!/bin/bash
+unset DBUS_LAUNCH
 export HOME="/root"
 export DISPLAY=":0"
 nohup ngrok tcp -region=ap 5900 &>/dev/null &
