@@ -22,7 +22,8 @@ wget -O startvps.sh "https://raw.githubusercontent.com/KhanhNguyen9872/Ubuntu_VP
 wget -O setupPS.sh "https://raw.githubusercontent.com/KhanhNguyen9872/Ubuntu_VPS_Google_Shell/main/setupPS.sh" 2> /dev/null
 sudo mv ./startvps.sh /bin/startvps 2> /dev/null
 sudo mv ./setupPS.sh ~/.bash_profile 2> /dev/null
-sudo chmod 777 .vnc/xstartup 2> /dev/null
+sudo chmod 777 ~/.bash_profile 2> /dev/null
+sudo chmod 777 ~/.vnc/xstartup 2> /dev/null
 sudo chmod 777 /bin/startvps 2> /dev/null
 sudo startvps
 echo ""
