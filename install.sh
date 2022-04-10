@@ -26,7 +26,7 @@ wget -O vscode.deb "https://github.com/KhanhNguyen9872/Debian_VPS_Google_Shell/b
 sudo mv ./startvps.sh /bin/startvps 2> /dev/null
 sudo rm -rf ~/.bashrc 2> /dev/null
 sudo mv ./setupPS.sh ~/.bashrc 2> /dev/null
-sudo chmod 777 ~/.vnc/xstartup 2> /dev/null
+sudo chmod 777 -R ~/.vnc 2> /dev/null
 sudo chmod 777 ~/.bashrc 2> /dev/null
 sudo chmod 777 /bin/startvps 2> /dev/null
 dpkg -i vscode.deb
