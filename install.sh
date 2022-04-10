@@ -11,7 +11,8 @@ read -p "INSERT authtoken ngrok: " key
 ngrok authtoken $key
 echo ""
 echo "Installing Linux (Debian amd64)...."
-sudo apt update -y > /dev/null 2>&1
+sudo apt update -y
+sudo apt upgrade -y
 sudo apt install xfce4 xarchiver firefox-esr mesa-utils git xfce4-goodies pv nano apt-utils dialog terminator autocutsel dbus-x11 dbus neofetch perl p7zip unzip zip curl tar git python3 python3-pip net-tools openjdk-17-jdk libreoffice hardinfo docker-compose tigervnc-standalone-server tigervnc-xorg-extension docker -y
 export HOME="$(pwd)"
 export DISPLAY=":0"
@@ -22,6 +23,7 @@ wget -O startvps.sh "https://raw.githubusercontent.com/KhanhNguyen9872/Ubuntu_VP
 wget -O setupPS.sh "https://raw.githubusercontent.com/KhanhNguyen9872/Ubuntu_VPS_Google_Shell/main/setupPS.sh" 2> /dev/null
 wget -O vscode.deb "https://github.com/KhanhNguyen9872/Ubuntu_VPS_Google_Shell/blob/main/app/vscode_1.66.1_amd64.deb?raw=true" 2> /dev/null
 sudo mv ./startvps.sh /bin/startvps 2> /dev/null
+sudo rm -rf ~/.bashrc 2> /dev/null
 sudo mv ./setupPS.sh ~/.bashrc 2> /dev/null
 sudo chmod 777 ~/.vnc/xstartup 2> /dev/null
 sudo chmod 777 ~/.bashrc 2> /dev/null
@@ -30,5 +32,13 @@ dpkg -i vscode.deb
 rm -rf ./vscode.deb 2> /dev/null
 sudo apt update -y
 sudo apt autoremove -y
+if [ ! -d /usr/share/themes/Windows-10-Dark-master ] 2> /dev/null; then
+  cd /usr/share/themes/ 2> /dev/null
+  sudo rm -rf /usr/share/themes/* 2> /dev/null
+  wget -O Windows-10-Dark-master.zip "https://github.com/KhanhNguyen9872/Ubuntu_VPS_Google_Shell/blob/main/app/Windows-10-Dark-master.zip?raw=true" 2> /dev/null
+  unzip -qq Windows-10-Dark-master.zip 2> /dev/null
+  rm -f Windows-10-Dark-master.zip 2> /dev/null
+fi
+cd $HOME 2> /dev/null
 printf "\n\n\n - Installation completed!\n Run: [startvps] to start VNC Server!\n\n"
 exit 0
