@@ -19,6 +19,14 @@ export HOME="$(pwd)"
 export DISPLAY=":0"
 cd $HOME 2> /dev/null
 sudo mkdir ~/.vnc 2> /dev/null
+if [ ! -d ~/.config ] 2> /dev/null; then
+  sudo mkdir ~/.config 2> /dev/null
+fi
+if [ ! -d ~/.config/fish ] 2> /dev/null; then
+  sudo mkdir ~/.config/fish 2> /dev/null
+fi
+echo "set fish_greeting" > ~/.config/fish/config.fish
+chmod -R 777 ~/.config 2> /dev/null
 sudo printf '#!/bin/bash\ndbus-launch &> /dev/null\nautocutsel -fork\nxfce4-session\n' > ~/.vnc/xstartup
 wget -O startvps.sh "https://raw.githubusercontent.com/KhanhNguyen9872/Debian_VPS_Google_Shell/main/startvps.sh" 2> /dev/null
 wget -O setupPS.sh "https://raw.githubusercontent.com/KhanhNguyen9872/Debian_VPS_Google_Shell/main/setupPS.sh" 2> /dev/null
