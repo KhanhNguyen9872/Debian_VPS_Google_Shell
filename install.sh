@@ -36,6 +36,20 @@ sudo rm -rf ~/.bashrc 2> /dev/null
 sudo mv ./setupPS.sh ~/.bashrc 2> /dev/null
 sudo rm -f /bin/wine 2> /dev/null
 sudo ln -s /etc/alternatives/wine64 /bin/wine 2> /dev/null
+touch ${HOME}/Desktop/wine64_explorer.desktop 2> /dev/null
+cat > "${HOME}/Desktop/wine64_explorer.desktop" <<EOL
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=wine64 explorer
+Comment=Run exe on Linux
+Exec=/bin/wine64 explorer.exe
+Icon=
+Path=
+Terminal=false
+StartupNotify=false
+EOL
+sudo chmod 777 ${HOME}/Desktop/wine64_explorer.desktop
 sudo chmod 777 -R ~/.vnc 2> /dev/null
 sudo chmod 777 ~/.bashrc 2> /dev/null
 sudo chmod 777 /bin/startvps 2> /dev/null
