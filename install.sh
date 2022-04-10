@@ -12,7 +12,7 @@ ngrok authtoken $key
 echo ""
 echo "Installing Linux (Debian amd64)...."
 sudo apt update -y > /dev/null 2>&1
-sudo apt install xfce4 xarchiver firefox-esr mesa-utils git xfce4-goodies pv nano apt-utils dialog dbus-x11 dbus neofetch perl p7zip unzip zip curl tar git python3 python3-pip net-tools tigervnc-standalone-server tigervnc-xorg-extension -y
+sudo apt install xfce4 xarchiver firefox-esr mesa-utils git xfce4-goodies zsh pv nano apt-utils dialog dbus-x11 dbus neofetch perl p7zip unzip zip curl tar git python3 python3-pip net-tools tigervnc-standalone-server tigervnc-xorg-extension -y
 export HOME="/root"
 export DISPLAY=":0"
 cd $HOME 2> /dev/null
