@@ -12,7 +12,11 @@
 wget -O install.sh "https://raw.githubusercontent.com/KhanhNguyen9872/Debian_VPS_Google_Shell/main/install.sh" 2> /dev/null; sudo bash install.sh
 ```
 
-3. Wait for install!
+3. Get authtoken ngrok [Here](https://dashboard.ngrok.com/get-started/your-authtoken) [Required ngrok account]
+
+4. Insert your authtoken ngrok
+
+5. Wait for install!
 
 # How to start?
 
