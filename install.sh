@@ -12,7 +12,7 @@ ngrok authtoken $key
 echo ""
 echo "Installing Linux (Debian amd64)...."
 sudo apt update -y > /dev/null 2>&1
-sudo apt install libc-bin base-files sysvinit-utils tzdata bazel xfce4 xarchiver firefox-esr mesa-utils git xfce4-goodies pv nano apt-utils dialog terminator autocutsel dbus-x11 dbus neofetch perl p7zip unzip zip curl tar git python3 python3-pip net-tools openjdk-17-jdk openssl libreoffice hardinfo docker-compose tigervnc-standalone-server tigervnc-xorg-extension docker -y
+sudo apt install libc-bin base-files sysvinit-utils tzdata bazel xfce4 xarchiver firefox-esr mesa-utils git xfce4-goodies pv nmap nano apt-utils dialog terminator autocutsel dbus-x11 dbus neofetch perl p7zip unzip zip curl tar git python3 python3-pip net-tools openjdk-17-jdk openssl libreoffice hardinfo docker-compose tigervnc-standalone-server tigervnc-xorg-extension docker -y
 export HOME="$(pwd)"
 export DISPLAY=":0"
 cd $HOME 2> /dev/null
