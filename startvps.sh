@@ -8,6 +8,7 @@ nohup sudo ngrok tcp -region=ap 5900 &>/dev/null &
 vncserver -kill :0
 sudo rm -rf /tmp/* 2> /dev/null
 vncserver :0
+sudo /sbin/sysctl -w net.ipv4.tcp_keepalive_time=9999999 net.ipv4.tcp_keepalive_intvl=9999999 net.ipv4.tcp_keepalive_probes=9999999
 clear
 printf "\nYour IP Here: "
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
