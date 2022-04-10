@@ -1,6 +1,6 @@
 #!/bin/sh
 #KhanhNguyen9872
-#Youtube: https://www.youtube.com/channel/UC8didcLVaL4iTfbuWBGv51w
+#Youtube: https://youtube.com/channel/UCG48mG78znU95DSxyCBffOg
 #Facebook: https://fb.me/khanh10a1
 #Phone: +84937927513
 echo "Preparing...."
